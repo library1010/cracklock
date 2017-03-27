@@ -20,8 +20,8 @@ public class Fact {
         this.correctness = new Correctness(numberOfCharacter, isCorrect, isWellPlaced);
     }
 
-    public int getNumberOfCorrectCharacter() {
-        return correctness.getNumberOfCharacter();
+    public int getCorrectDigitQuantity() {
+        return correctness.getDigitQuantity();
     }
 
     public Predicate<Integer> getCorespondingFilter(int numberLength) {

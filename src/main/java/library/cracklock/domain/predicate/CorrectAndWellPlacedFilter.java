@@ -11,18 +11,18 @@ public class CorrectAndWellPlacedFilter extends FilterCorrectNumber {
     @Override
     public boolean test(Integer t) {
         Fact fact = getFact();
-        int occurence = 0;
+        int samePositionOccurenceTime = 0;
         int testNum = t;
         int factNum = fact.getNumber();
-        for(int i = 0; i < getNumberLength(); i++) {
-            if(testNum % 10 == factNum % 10) {
-                occurence++;
+        for (int i = 0; i < getNumberLength(); i++) {
+            if (testNum % 10 == factNum % 10) {
+                samePositionOccurenceTime++;
             }
-            
+
             testNum /= 10;
             factNum /= 10;
         }
-        return occurence == fact.getNumberOfCorrectCharacter();
+        return samePositionOccurenceTime == fact.getCorrectDigitQuantity();
     }
 
 }
