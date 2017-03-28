@@ -16,6 +16,8 @@ public class NotCorrectOrNotWellPlacedFilter extends FilterCorrectNumber {
     public boolean test(Integer t) {
         Fact fact = getFact();
 
+        // This is not a perfect solution, but it worked
+        // Feel free to improve this solution
         if (fact.getCorrectDigitQuantity() != 0 && hasCorrectNumberInCorrectPosition(t, fact)) {
             return false;
         }

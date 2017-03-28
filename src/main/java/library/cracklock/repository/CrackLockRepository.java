@@ -15,8 +15,7 @@ public class CrackLockRepository {
 
     public CrackLockRepository(int numberLength) {
         numbersList = new ArrayList<>();
-        Range range = Range.getRange(numberLength);
-        IntStream.rangeClosed(0, range.getUpperBound()).forEach(numbersList::add);
+        IntStream.rangeClosed(0, Range.getRange(numberLength).getUpperBound()).forEach(numbersList::add);
     }
 
     public List<Integer> getTheCurrentNumberList() {

@@ -9,15 +9,6 @@ import library.cracklock.domain.Fact;
 import library.cracklock.domain.predicate.CorrectAndWellPlacedFilter;
 
 public class CorrectAndWellPlacedFilterTest {
-
-    @Test
-    public void testName() throws Exception {
-        assertThat(String.format("%03d", 5), is("005"));
-        assertThat("005".split("0").length, is(3));
-        assertThat("105".split("0").length, is(2));
-        assertThat("015".split("0").length, is(2));
-        assertThat("115".split("0").length, is(1));
-    }
     
     @Test
     public void testFact() throws Exception {
