@@ -16,7 +16,6 @@ Do as following intruction
 * In import wizard, choose `Existing Maven Projects`, then click Next button.
 * Browse to the project directory (which contains pom.xml file), select the pom.xml file and click Next button.
 
----
 ## Reference
 ### Project Lombok
 Home page URL: 
