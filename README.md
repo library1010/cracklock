@@ -14,7 +14,7 @@ Do as following intruction
 * Download Project Lombok, import it to Eclipse (please refer to the **Reference**).
 * Right click to `Package Explorer` and choose `Import`.
 * In import wizard, choose `Existing Maven Projects`, then click Next button.
-* Browse to the project directory (which contains pom.xml file), select the pom.xml file and click Next button.
+* Browse to the project directory (which contains `pom.xml` file), select the pom.xml file and click Next button.
 
 ## Reference
 ### Project Lombok
