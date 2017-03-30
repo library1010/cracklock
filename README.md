@@ -1,6 +1,9 @@
 # Crack the lock
 Just solved a puzzle in internet
 
+![Alt text](https://cloud.githubusercontent.com/assets/6070520/24503343/a968e500-158c-11e7-9b10-5fd8664fa591.jpg "Crack the lock puzzle")
+
+
 ## How to build
 After cloning this project, you can build it by using maven, or import it to eclipse (via import maven project)
 
