@@ -5,7 +5,9 @@ import java.util.Set;
 import java.util.stream.IntStream;
 
 import library.cracklock.domain.Fact;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper=true)
 public class NotCorrectOrNotWellPlacedFilter extends FilterCorrectNumber {
 
     public NotCorrectOrNotWellPlacedFilter(Fact fact, int numberLength) {
@@ -16,7 +18,7 @@ public class NotCorrectOrNotWellPlacedFilter extends FilterCorrectNumber {
     public boolean test(Integer t) {
         Fact fact = getFact();
 
-        // This is not a perfect solution, but it worked
+        // This is not a perfect solution, but it worked (because of my own heurestic implementation)
         // Feel free to improve this solution
         if (fact.getCorrectDigitQuantity() != 0 && hasCorrectNumberInCorrectPosition(t, fact)) {
             return false;
@@ -34,12 +36,10 @@ public class NotCorrectOrNotWellPlacedFilter extends FilterCorrectNumber {
     }
 
     private boolean hasCorrectNumberInCorrectPosition(Integer t, Fact fact) {
-        for (int i = 1; i <= fact.getCorrectDigitQuantity(); i++) {
-            if (new Fact(fact.getNumber(), i, true, true).getCorespondingFilter(getNumberLength()).test(t)) {
-                return true;
-            }
-        }
-        return false;
+        return IntStream
+            .rangeClosed(1, fact.getCorrectDigitQuantity())
+            .filter(i -> new Fact(fact.getNumber(), i, true, true).getCorespondingFilter(getNumberLength()).test(t))
+            .count() > 0;
     }
 
 }

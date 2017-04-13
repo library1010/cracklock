@@ -12,12 +12,25 @@ Run the following command in terminal
 
 `mvn clean install`
 
-### Build by eclipse
-Do as following intruction
+### Build by Eclipse
+Do as following instructions
 * Download Project Lombok, import it to Eclipse (please refer to the **Reference**).
 * Right click to `Package Explorer` and choose `Import`.
 * In import wizard, choose `Existing Maven Projects`, then click Next button.
 * Browse to the project directory (which contains `pom.xml` file), select the `pom.xml` file and click Next button.
+
+## How to run
+### Build by maven
+After builded the project, you can run it by maven by using the following command
+
+`mvn -q exec:java`
+
+Or you can combine the building and running phase by using the following command
+
+`mvn -q -DskipTests clean install exec:java`
+
+### Run by Eclipse
+Go to `library.cracklock.App` class, right click to the main method, and choose `Run As` > `Java Application`.
 
 ## Reference
 ### Project Lombok

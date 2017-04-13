@@ -20,6 +20,14 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <configuration>
+          <mainClass>library.cracklock.App</mainClass>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
@@ -49,6 +57,7 @@
       <groupId>org.jmockit</groupId>
       <artifactId>jmockit</artifactId>
       <version>1.22</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>

@@ -1,7 +1,9 @@
 package library.cracklock.domain.predicate;
 
 import library.cracklock.domain.Fact;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper=true)
 public class CorrectAndWellPlacedFilter extends FilterCorrectNumber {
 
     public CorrectAndWellPlacedFilter(Fact fact, int numberLength) {

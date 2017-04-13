@@ -15,11 +15,9 @@ public class CrackTheLockApplication {
         repository = new CrackLockRepository(numberLength);
     }
 
-    public void solve(List<Fact> factList) {
+    public List<Integer> solve(List<Fact> factList) {
         factList.stream().forEach(e -> repository.reduce(e.getCorespondingFilter(numberLength)));
-
-        System.out.println("The list of possible passcode is:");
-        repository.getTheCurrentNumberList().stream().forEach(System.out::println);
-        System.out.println("Done");
+        return repository.getTheCurrentNumberList();
+        
     }
 }

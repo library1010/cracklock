@@ -25,6 +25,10 @@ public class Fact {
     }
 
     public Predicate<Integer> getCorespondingFilter(int numberLength) {
+        if(numberLength < getCorrectDigitQuantity()) {
+            throw new IllegalArgumentException("The number length should be greater than the correct digit");
+        }
+        
         return isCorrectAndWellPlaced()
             ? new CorrectAndWellPlacedFilter(this, numberLength)
             : new NotCorrectOrNotWellPlacedFilter(this, numberLength);
